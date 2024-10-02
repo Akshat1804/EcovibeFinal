@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="main">
+        <nav class="flex items-center justify-between p-4 bg-gray-800 text-white">
+            <div class="text-xl font-bold">
+                EcoVibe
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <input type="text" placeholder="Search..." class="py-2 px-4 pr-10 rounded-full bg-gray-700 text-white placeholder-gray-300 focus:outline-none">
+                    <i class="ri-search-line absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-300"></i>
+                </div>
+                <div class="relative">
+                    <select class="py-2 pr-8 bg-gray-800 text-white appearance-none focus:outline-none">
+                        <option>Current Location</option>
+                        <option>MUMBAI</option>
+                        <option>DELHI</option>
+                        <option>PUNE</option>
+                        <option>BHOPAL</option>
+                    </select>
+                    <i class="ri-arrow-down-s-line absolute right-0 top-1/2 transform -translate-y-1/2 pl-[2px]"></i>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <i class="ri-user-line text-2xl"></i>
+                <i class="ri-shopping-cart-line text-2xl"></i>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="relative w-full overflow-hidden">
+                <div class="flex transition-transform duration-500 ease-in-out" id="slider">
+                    <div class="w-full flex-shrink-0">
+                        <img src="s1.webp" alt="Electronics Sale 1" class="w-full h-[650px]">
+                    </div>
+                    <div class="w-full flex-shrink-0">
+                        <img src="s2.webp" alt="Electronics Sale 2" class="w-full h-[650px]">
+                    </div>
+                    <div class="w-full flex-shrink-0">
+                        <img src="s3.webp" alt="Electronics Sale 3" class="w-full h-[650px]">
+                    </div>
+                </div>
+                <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2" onclick="changeSlide(-1)">
+                    <i class="ri-arrow-left-s-line text-3xl text-gray-800"></i>
+                </button>
+                <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2" onclick="changeSlide(1)">
+                    <i class="ri-arrow-right-s-line text-3xl text-gray-800"></i>
+                </button>
+            </div>
+            <script>
+                let currentSlide = 0;
+                const slider = document.getElementById('slider');
+                const slides = slider.children;
+
+                function changeSlide(direction) {
+                    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+                    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+                }
+            </script>
+        </div>
+    </div>
+    <div class="bank">
+        <div class="flex flex-col items-center">
+            <h2 class="text-3xl font-bold mb-[50px] self-start ml-[170px] mt-[50px]">Exciting Bank Offers</h2>
+            <div class="flex justify-center space-x-4">
+                <img src="bank1 (1).png" alt="Bank Offer 1" class="w-1/4 h-auto object-cover border rounded-2xl">
+                <img src="bank1 (2).png" alt="Bank Offer 2" class="w-1/4 h-auto object-cover border rounded-2xl">
+                <img src="bank1 (3).png" alt="Bank Offer 3" class="w-1/4 h-auto object-cover border rounded-2xl">
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto">
+        <h1 class="text-3xl font-bold mb-8 text-center"></h1>
+    <h1 class="text-3xl font-bold mb-8 text-center mt-10">MID RANGE GADGETS</h1>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+1" alt="Phone 1" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-1">Phone 1</h2>
+                <p class="text-gray-600 mb-2">$599</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★☆</span>
+                    <span class="ml-1 text-gray-600">4.0</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+2" alt="Phone 2" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 2</h2>
+                <p class="text-gray-600 mb-2">$699</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★★</span>
+                    <span class="ml-1 text-gray-600">5.0</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+3" alt="Phone 3" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 3</h2>
+                <p class="text-gray-600 mb-2">$799</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★☆☆</span>
+                    <span class="ml-1 text-gray-600">3.0</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+4" alt="Phone 4" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 4</h2>
+                <p class="text-gray-600 mb-2">$899</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★☆</span>
+                    <span class="ml-1 text-gray-600">4.5</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+6" alt="Phone 6" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 6</h2>
+                <p class="text-gray-600 mb-2">$1099</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★☆</span>
+                    <span class="ml-1 text-gray-600">4.2</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+7" alt="Phone 7" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 7</h2>
+                <p class="text-gray-600 mb-2">$1199</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★☆</span>
+                    <span class="ml-1 text-gray-600">4.3</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+8" alt="Phone 8" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 8</h2>
+                <p class="text-gray-600 mb-2">$1299</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★★</span>
+                    <span class="ml-1 text-gray-600">4.7</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+9" alt="Phone 9" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 9</h2>
+                <p class="text-gray-600 mb-2">$1399</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★☆</span>
+                    <span class="ml-1 text-gray-600">4.1</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+10" alt="Phone 10" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 10</h2>
+                <p class="text-gray-600 mb-2">$1499</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★★</span>
+                    <span class="ml-1 text-gray-600">4.9</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+11" alt="Phone 11" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 11</h2>
+                <p class="text-gray-600 mb-2">$1599</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★☆</span>
+                    <span class="ml-1 text-gray-600">4.4</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+1" alt="Phone 1" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-1">Phone 1</h2>
+                <p class="text-gray-600 mb-2">$599</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★☆</span>
+                    <span class="ml-1 text-gray-600">4.0</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+13" alt="Phone 13" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 13</h2>
+                <p class="text-gray-600 mb-2">$1799</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★★</span>
+                    <span class="ml-1 text-gray-600">5.0</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+13" alt="Phone 13" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 13</h2>
+                <p class="text-gray-600 mb-2">$1799</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★★</span>
+                    <span class="ml-1 text-gray-600">5.0</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+13" alt="Phone 13" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 13</h2>
+                <p class="text-gray-600 mb-2">$1799</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★★</span>
+                    <span class="ml-1 text-gray-600">5.0</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+13" alt="Phone 13" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 13</h2>
+                <p class="text-gray-600 mb-2">$1799</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★★</span>
+                    <span class="ml-1 text-gray-600">5.0</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+13" alt="Phone 13" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 13</h2>
+                <p class="text-gray-600 mb-2">$1799</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★★</span>
+                    <span class="ml-1 text-gray-600">5.0</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+13" alt="Phone 13" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 13</h2>
+                <p class="text-gray-600 mb-2">$1799</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★★</span>
+                    <span class="ml-1 text-gray-600">5.0</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+13" alt="Phone 13" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 13</h2>
+                <p class="text-gray-600 mb-2">$1799</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★★</span>
+                    <span class="ml-1 text-gray-600">5.0</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+13" alt="Phone 13" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 13</h2>
+                <p class="text-gray-600 mb-2">$1799</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★★</span>
+                    <span class="ml-1 text-gray-600">5.0</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+13" alt="Phone 13" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 13</h2>
+                <p class="text-gray-600 mb-2">$1799</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★★</span>
+                    <span class="ml-1 text-gray-600">5.0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

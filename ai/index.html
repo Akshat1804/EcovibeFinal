@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="flex items-center justify-between p-4 bg-gray-800 text-white">
+        <div class="text-xl font-bold">
+            EcoVibe
+        </div>
+        <div class="flex items-center space-x-4">
+            <div class="relative">
+                <input type="text" placeholder="Search..." class="py-2 px-4 pr-10 rounded-full bg-gray-700 text-white placeholder-gray-300 focus:outline-none">
+                <i class="ri-search-line absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-300"></i>
+            </div>
+            <div class="relative">
+                <select class="py-2 pr-8 bg-gray-800 text-white appearance-none focus:outline-none">
+                    <option>Current Location</option>
+                    <option>New York</option>
+                    <option>Los Angeles</option>
+                    <option>Chicago</option>
+                    <option>Houston</option>
+                </select>
+                <i class="ri-arrow-down-s-line absolute right-0 top-1/2 transform -translate-y-1/2 pl-[2px]"></i>
+            </div>
+        </div>
+        <div class="flex items-center space-x-4">
+            <div class="relative group">
+                <i class="ri-user-line text-2xl cursor-pointer"></i>
+                <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg hidden group-hover:block">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Logout</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Help</a>
+                </div>
+            </div>
+            <i class="ri-shopping-cart-line text-2xl"></i>
+        </div>
+    </nav>
+<div class="container p-4 flex flex-col items-center justify-center min-h-screen">
+    <h1 class="text-2xl font-bold mb-4"><h2 class="text-black text-4xl">Product Search with</h2> <h3 class="text-yellow-500 text-xl mt-2"> Generative <span class="text-red-500">AI</span></h3></h1>
+    <div class="mb-4 w-full max-w-md">
+        <input type="text" id="productSearch" class="w-full p-2 border rounded mt-6" placeholder="Enter product name (e.g., mobile, computer, television)">
+        <button onclick="searchProducts()" class="mt-2 bg-blue-500 text-white p-2 rounded w-full">Search Products</button>
+    </div>
+    <div id="searchStatus" class="mt-4 text-lg font-semibold"></div>
+    <div id="searchResult" class="mt-4 hidden">
+        <button id="resultButton" class="bg-green-500 text-white p-2 rounded">Your search result is ready - View Results</button>
+    </div>
+</div>
+
+<script>
+    function searchProducts() {
+        const searchTerm = document.getElementById('productSearch').value.toLowerCase();
+        const searchStatus = document.getElementById('searchStatus');
+        const searchResult = document.getElementById('searchResult');
+        const resultButton = document.getElementById('resultButton');
+        
+        searchStatus.textContent = 'Searching...';
+        searchResult.classList.add('hidden');
+        
+        setTimeout(() => {
+            searchStatus.textContent = '';
+            searchResult.classList.remove('hidden');
+            
+            if (searchTerm.includes('mobile')) {
+                resultButton.textContent = 'View Mobile Phones on Amazon';
+                resultButton.onclick = () => window.location.href = 'https://www.amazon.com';
+            } else if (searchTerm.includes('computer')) {
+                resultButton.textContent = 'View Computers on Google';
+                resultButton.onclick = () => window.location.href = 'https://www.google.com';
+            } else if (searchTerm.includes('television')) {
+                resultButton.textContent = 'View Televisions on Flipkart';
+                resultButton.onclick = () => window.location.href = 'https://www.flipkart.com';
+            } else {
+                resultButton.textContent = 'No specific results - Search on Google';
+                resultButton.onclick = () => window.location.href = 'https://www.google.com';
+            }
+        }, 3000);
+    }
+</script>
+</body>
+</html>

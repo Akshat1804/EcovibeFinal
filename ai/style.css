@@ -1,0 +1,14 @@
+body {
+    background-image: url(shopping-07-920x518.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-y: hidden;
+}
+
+input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+}

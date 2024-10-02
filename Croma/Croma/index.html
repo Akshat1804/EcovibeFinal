@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="main">
+        <nav class="flex items-center justify-between p-4 bg-gray-800 text-white">
+            <div class="text-xl font-bold">
+                EcoVibe
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <input type="text" placeholder="Search..." class="py-2 px-4 pr-10 rounded-full bg-gray-700 text-white placeholder-gray-300 focus:outline-none">
+                    <i class="ri-search-line absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-300"></i>
+                </div>
+                <div class="relative">
+                    <select class="py-2 pr-8 bg-gray-800 text-white appearance-none focus:outline-none">
+                        <option>Current Location</option>
+                        <option>MUMBAI</option>
+                        <option>DELHI</option>
+                        <option>PUNE</option>
+                        <option>BHOPAL</option>
+                    </select>
+                    <i class="ri-arrow-down-s-line absolute right-0 top-1/2 transform -translate-y-1/2 pl-[2px]"></i>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <i class="ri-user-line text-2xl"></i>
+                <i class="ri-shopping-cart-line text-2xl"></i>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="relative w-full overflow-hidden">
+                <div class="flex transition-transform duration-500 ease-in-out" id="slider">
+                    <div class="w-full flex-shrink-0">
+                        <img src="s1.webp" alt="Electronics Sale 1" class="w-full h-[650px]">
+                    </div>
+                    <div class="w-full flex-shrink-0">
+                        <img src="s2.webp" alt="Electronics Sale 2" class="w-full h-[650px]">
+                    </div>
+                    <div class="w-full flex-shrink-0">
+                        <img src="s3.webp" alt="Electronics Sale 3" class="w-full h-[650px]">
+                    </div>
+                </div>
+                <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2" onclick="changeSlide(-1)">
+                    <i class="ri-arrow-left-s-line text-3xl text-gray-800"></i>
+                </button>
+                <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2" onclick="changeSlide(1)">
+                    <i class="ri-arrow-right-s-line text-3xl text-gray-800"></i>
+                </button>
+            </div>
+            <script>
+                let currentSlide = 0;
+                const slider = document.getElementById('slider');
+                const slides = slider.children;
+
+                function changeSlide(direction) {
+                    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+                    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+                }
+            </script>
+        </div>
+    </div>
+    <div class="bank">
+        <div class="flex flex-col items-center">
+            <h2 class="text-3xl font-bold mb-6 self-start ml-4">Exciting Bank Offers</h2>
+            <div class="flex justify-center space-x-4">
+                <img src="bank-offer-1.jpg" alt="Bank Offer 1" class="w-1/4 h-auto object-cover">
+                <img src="bank-offer-2.jpg" alt="Bank Offer 2" class="w-1/4 h-auto object-cover">
+                <img src="bank-offer-3.jpg" alt="Bank Offer 3" class="w-1/4 h-auto object-cover">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

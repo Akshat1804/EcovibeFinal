@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .phone-card {
+            width: 240px; /* Adjusted width for portrait photos */
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <nav class="flex items-center justify-between p-4 bg-gray-800 text-white">
+        <div class="text-xl font-bold">
+            EcoVibe
+        </div>
+        <div class="flex items-center space-x-4">
+            <div class="relative">
+                <input type="text" placeholder="Search..." class="py-2 px-4 pr-10 rounded-full bg-gray-700 text-white placeholder-gray-300 focus:outline-none">
+                <i class="ri-search-line absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-300"></i>
+            </div>
+            <div class="relative">
+                <select class="py-2 pr-8 bg-gray-800 text-white appearance-none focus:outline-none">
+                    <option>Current Location</option>
+                    <option>MUMBAI</option>
+                    <option>DELHI</option>
+                    <option>PUNE</option>
+                    <option>BHOPAL</option>
+                </select>
+                <i class="ri-arrow-down-s-line absolute right-0 top-1/2 transform -translate-y-1/2 pl-[2px]"></i>
+            </div>
+        </div>
+        <div class="flex items-center space-x-4">
+            <i class="ri-user-line text-2xl"></i>
+            <i class="ri-shopping-cart-line text-2xl"></i>
+        </div>
+    </nav>
+    <h1 class="text-3xl font-bold mb-8 text-center mt-10">MID RANGE SMART PHONES</h1>
+    <div class="container mx-auto">
+        <h1 class="text-3xl font-bold mb-8 text-center"></h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+1" alt="Phone 1" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-1">Phone 1</h2>
+                <p class="text-gray-600 mb-2">$599</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★☆</span>
+                    <span class="ml-1 text-gray-600">4.0</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+2" alt="Phone 2" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 2</h2>
+                <p class="text-gray-600 mb-2">$699</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★★</span>
+                    <span class="ml-1 text-gray-600">5.0</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+3" alt="Phone 3" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 3</h2>
+                <p class="text-gray-600 mb-2">$799</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★☆☆</span>
+                    <span class="ml-1 text-gray-600">3.0</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+4" alt="Phone 4" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 4</h2>
+                <p class="text-gray-600 mb-2">$899</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★☆</span>
+                    <span class="ml-1 text-gray-600">4.5</span>
+                </div>
+            </div>
+            <!-- <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+5" alt="Phone 5" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 5</h2>
+                <p class="text-gray-600 mb-2">$999</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★★</span>
+                    <span class="ml-1 text-gray-600">4.8</span>
+                </div>
+            </div> -->
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+6" alt="Phone 6" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 6</h2>
+                <p class="text-gray-600 mb-2">$1099</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★☆</span>
+                    <span class="ml-1 text-gray-600">4.2</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+7" alt="Phone 7" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 7</h2>
+                <p class="text-gray-600 mb-2">$1199</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★☆</span>
+                    <span class="ml-1 text-gray-600">4.3</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+8" alt="Phone 8" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 8</h2>
+                <p class="text-gray-600 mb-2">$1299</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★★</span>
+                    <span class="ml-1 text-gray-600">4.7</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+9" alt="Phone 9" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 9</h2>
+                <p class="text-gray-600 mb-2">$1399</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★☆</span>
+                    <span class="ml-1 text-gray-600">4.1</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+10" alt="Phone 10" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 10</h2>
+                <p class="text-gray-600 mb-2">$1499</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★★</span>
+                    <span class="ml-1 text-gray-600">4.9</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+11" alt="Phone 11" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 11</h2>
+                <p class="text-gray-600 mb-2">$1599</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★☆</span>
+                    <span class="ml-1 text-gray-600">4.4</span>
+                </div>
+            </div>
+            <!-- <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+12" alt="Phone 12" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 12</h2>
+                <p class="text-gray-600 mb-2">$1699</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★★</span>
+                    <span class="ml-1 text-gray-600">4.6</span>
+                </div>
+            </div> -->
+            <div class="bg-white rounded-lg shadow-md p-4 phone-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Phone+13" alt="Phone 13" class="w-full h-auto object-contain mb-4">
+                <h2 class="text-xl font-semibold mb-2">Phone 13</h2>
+                <p class="text-gray-600 mb-2">$1799</p>
+                <div class="flex items-center">
+                    <span class="text-yellow-400">★★★★★</span>
+                    <span class="ml-1 text-gray-600">5.0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+<script>
+    const phoneNames = [
+        "iPhone 14 Pro Max",
+        "Samsung Galaxy S23 Ultra",
+        "Google Pixel 7 Pro",
+        "OnePlus 11",
+        // "Xiaomi 13 Pro",
+        "Sony Xperia 1 V",
+        "Asus ROG Phone 7 Ultimate",
+        "Motorola Edge 40 Pro",
+        "Oppo Find X6 Pro",
+        "Huawei P60 Pro",
+        "Vivo X90 Pro+",
+        // "Nothing Phone (2)",
+        "Apple iPhone SE (2022)"
+    ];
+
+    const phoneImages = [
+        "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14-pro-max-.jpg",
+        "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23-ultra-5g.jpg",
+        "https://fdn2.gsmarena.com/vv/bigpic/google-pixel7-pro-new.jpg",
+        "https://fdn2.gsmarena.com/vv/bigpic/oneplus-11.jpg",
+        // "https://m.media-amazon.com/images/I/41mrRzgs1PL._SL500_.jpg",
+        "https://fdn2.gsmarena.com/vv/bigpic/sony-xperia-1-v.jpg",
+        "https://fdn2.gsmarena.com/vv/bigpic/asus-rog-phone-7-ultimate.jpg",
+        "https://fdn2.gsmarena.com/vv/bigpic/motorola-edge-40-pro.jpg",
+        "https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x6-pro.jpg",
+        "https://fdn2.gsmarena.com/vv/bigpic/huawei-p60-pro.jpg",
+        "https://fdn2.gsmarena.com/vv/bigpic/vivo-x90-pro-plus.jpg",
+        // "https://www.lowyat.net/wp-content/uploads/2023/07/Nothing-Phone-2-now-official-3.jpg",
+        "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-se-2022.jpg"
+    ];
+
+    const phoneCards = document.querySelectorAll('.bg-white.rounded-lg.shadow-md.p-4');
+    phoneCards.forEach((card, index) => {
+        if (index < phoneNames.length) {
+            const img = card.querySelector('img');
+            const h2 = card.querySelector('h2');
+            
+            img.src = phoneImages[index];
+            img.alt = phoneNames[index];
+            h2.textContent = phoneNames[index];
+        }
+    });
+</script>
+</body>
+</html>
